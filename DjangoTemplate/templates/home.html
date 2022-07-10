@@ -1,0 +1,253 @@
+
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div style="background-color: #ffffff;
+        background-image: linear-gradient(160deg, #ffffff 0%, #80D0C7 50%, #0093E9 100%);
+        ">
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        {% load static %} <img src="{% static 'images/10.png' %}" alt="" width="30" height="40" class="d-inline-block ">
+                        <span class=text-danger>Hp</span> Gas
+                    </a>
+                    <form class="d-flex">
+
+                        <div class="collapse navbar-collapse mx-2" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <a class="nav-item nav-link active" href="{% url 'home' %}">Home <span class="sr-only"></span></a>
+                  <a class="nav-item nav-link" href="{% url 'contact' %}">Contact Us</a>
+                  <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+
+                            </ul>
+                        </div>
+                        <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </form>
+                </div>
+            </nav>
+            
+            <div class="row">
+                <div class="col-sm-1">
+
+                </div>
+                <div class="col-sm-7 mt-5">
+                    <div class="text-center pr-2">
+                        <h1 class="mt-5">
+                            <p> Hi!</p>
+                            <p> we sale Hp Gas for your</p>
+                            <p> Domastic and Non-Domastic uses.</p>
+                        </h1>
+                    </div>
+
+                </div>
+                <div class="col-sm-4 ">
+                    {% load static %} <img src="{% static 'images/11.png' %}" class="img-fluid rounded" alt="...">
+                </div>
+            </div>
+        </div>
+
+
+        <!--3red part-->
+        <div class="row mt-5">
+            <div class="col-sm-3">
+
+            </div>
+            <div class="col-sm-6">
+                <div class=" mb-3" style="max-width: 540rem;">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            {% load static %} <img src="{% static 'images/12.png' %}" width="350" height="400" class="img-fluid rounded" alt="...">
+                        </div>
+                        <div class="col-md-6 ">
+                            <div class="card-body mt-2">
+                                <h5 class="card-title h1">We think <br> Another way</h5>
+                                <p class="card-text my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Eveniet delectus ipsam mollitia suscipit facilis debitis eaque voluptate, ullam
+                                    tenetur fuga numquam, accusantium explicabo nobis distinctio. Rem, quasi.
+                                    Perspiciatis, consectetur eaque.</p>
+                                <p class="card-text"><small class="card-footer text-muted ">Last updated 3 mins
+                                        ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-3">
+
+            </div>
+        </div>
+        <!--our team-->
+        <div class="container-lg">
+            <div class="m-3">
+                <h1 class="text-center" style="font-size: 72px;
+                background: -webkit-linear-gradient(#09009f, #00ff95 80%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;">Our Clients</h1>
+                <div class="row mt-3">
+                    <div class="col-sm-3">
+                        <a href="https://www.facebook.com/profile.php?id=100009623286343">
+                            <img src="https://scontent.fccu3-1.fna.fbcdn.net/v/t39.30808-6/278176592_3029273550736725_5411091887192061870_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=t7xFBrMCUaMAX_cVYSb&_nc_ht=scontent.fccu3-1.fna&oh=00_AT_PK_DNFk91jB19eMfML4qt3XehoNTMnEmDS9xPH0IEtw&oe=62CDB2A5"
+                                class="card-img-top rounded-circle" alt="...">
+
+                        </a>
+                        <div class="card-body m-5">
+                            <h5 class="card-title text-center">Pabitra Pandit</h5>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="https://www.facebook.com/profile.php?id=100007168244786">
+                            <img src="https://scontent.fccu3-1.fna.fbcdn.net/v/t39.30808-1/278357941_3064367187145526_6279007339138759950_n.jpg?stp=dst-jpg_s320x320&_nc_cat=101&ccb=1-7&_nc_sid=7206a8&_nc_ohc=aWNFCXOjdwAAX9bB_Bo&_nc_ht=scontent.fccu3-1.fna&oh=00_AT-0tDBaoNfrH1A6N0sLuA2waFZ-JM3WxNG_fzL7wacqYw&oe=62CD2C01"
+                                class="card-img-top rounded-circle" alt="...">
+                        </a>
+
+                        <div class="card-body m-5">
+                            <h5 class="card-title text-center">Soumyadip Banerjee</h5>
+
+                        </div>
+
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="https://www.facebook.com/kousik.jana.549">
+
+                            <img src="https://scontent.fccu3-1.fna.fbcdn.net/v/t39.30808-6/273013336_1294996620977447_4973983360352478312_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=of3GnpD9tUEAX8JfSK7&_nc_ht=scontent.fccu3-1.fna&oh=00_AT9ZuspN3A3LKBWGYFbqmMlj8cNoue6UxZMpZ9g8K5BCLw&oe=62CCC5EC"
+                                class="card-img-top rounded-circle" alt="...">
+
+                        </a>
+                        <div class="card-body m-5">
+                            <h5 class="card-title text-center">Kousik Jana</h5>
+
+                        </div>
+
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="https://www.facebook.com/sbera.sbera.902">
+                            <img src="https://scontent.fccu3-1.fna.fbcdn.net/v/t39.30808-6/280495115_1033118387603561_5357429932412269707_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=SgCNOaon-HYAX_RZj9-&tn=Ni0zwRGHi0Ez2a3q&_nc_ht=scontent.fccu3-1.fna&oh=00_AT-xTKPfsDWW3_Bhif22Ode87gq4JGEFXCUJ-1g5n7du1A&oe=62CD2546"
+                                class="card-img-top rounded-circle" alt="...">
+
+                        </a>
+                        <div class="card-body m-5">
+                            <h5 class="card-title text-center">Soumen Bera</h5>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!--footer-->
+
+
+
+        <footer class="text-center text-white" style="background-color: #f1f1f1;">
+            <!-- Grid container -->
+            <div class="container pt-4">
+                <!-- Section: Social media -->
+                <section class="mb-4">
+                    <!-- Facebook -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                        data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+
+                    <!-- Twitter -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                        data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+
+                    <!-- Google -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                        data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+
+                    <!-- Instagram -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                        data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+
+                    <!-- Linkedin -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                        data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+                    <!-- Github -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                        data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+                </section>
+                <!-- Section: Social media -->
+            </div>
+            <!-- Grid container -->
+
+        </footer>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,500&display=swap');
+    </style>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+{% block title %}Home{% endblock title %}

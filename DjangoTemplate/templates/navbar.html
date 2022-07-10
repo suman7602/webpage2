@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar navbar-light " style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href=>
+        {% load static %} <img src="{% static 'images/10.png' %}" alt="" alt="" width="30" height="40"
+          class="d-inline-block ">
+
+        <span class=text-danger>Hp</span> Gas
+      </a>
+      <form class="d-flex">
+
+        <div class="collapse navbar-collapse mx-2" id="navbarNav">
+          <ul class="navbar-nav">
+            <a class="nav-item nav-link active" href="{% url 'home' %}">Home <span class="sr-only"></span></a>
+            <a class="nav-item nav-link" href="{% url 'contact' %}">Contact Us</a>
+            <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+
+
+          </ul>
+        </div>
+        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </form>
+    </div>
+  </nav>
+</div>

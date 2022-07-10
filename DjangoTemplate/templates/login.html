@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href=>
+                {% load static %} <img src="{% static 'images/10.png' %}" alt="" alt="" width="30" height="40"
+                    class="d-inline-block ">
+
+                <span class=text-danger>Hp</span> Gas
+            </a>
+            <form class="d-flex">
+
+                <div class="collapse navbar-collapse mx-2" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </form>
+        </div>
+    </nav>
+</div>
+<!--login-->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+         body {
+            height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(to top, #330867 0%, #30cfd0 100%);
+          
+
+
+        }
+        .container {
+            margin: 120px auto;
+            max-width: 20rem;
+            width: 100%;
+            background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+
+
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .container header {
+            font-size: 40px;
+            font-family: 600;
+            background: -webkit-linear-gradient(45deg, #09009f, #00ff95 80%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .space {
+            margin-bottom: 10px;
+        }
+
+        .box {
+            border-radius: 5px;
+            text-align: center;
+            border: black;
+        }
+        @media only screen and (max-width:450px) {
+            body {
+                background-repeat: no-repeat;
+
+                background: none
+            }
+
+            .container {
+                background-image: -moz-linear-gradient(to bottom, #68EACC, #497BE8);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="container">
+            <header> <strong>Login-notes </strong> </header>
+            <div class="inputext">
+                <h4>User-name</h4>
+                <input name="user" type="text" class="box" placeholder="Enter your User name">
+                <h4 >password</h4>
+                <input name="pass" type="password" class="space box " placeholder="Enter your password"><br>
+                <button type="submit" class="btn btn-success">Submit</button>
+                <h5>{{message}}</h5>
+            </div>
+    </form>
+   
+        
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
+
+{% endblock content %}
+
+
+
+
+
+
+{% block title %}
+
+Login
+
+{% endblock title%}
